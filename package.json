@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "main": "./server",
+  "dependencies": {
+    "connect":  "*",
+    "express":  "*",
+    "jade":     "*",
+    "mongoose": "*",
+    "mongodb":  "*",
+    "socket.io":"*",
+    "cheerio":"*"
+  },
+  "devDependencies": {
+    "vows":   "*",
+	  "mocha":  "*",
+	  "should": "*",
+	  "chai":   "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
