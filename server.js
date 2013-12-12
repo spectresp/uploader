@@ -2,8 +2,10 @@
 var connect = require('connect'),
     express = require('express'),
     app = express(),
+    http = require('http'),
     io = require('socket.io'),
-    port = (process.env.PORT || 4444);
+    port = (4444);
+//    port = (process.env.PORT || 4444);
 
 var postRoutes = require('./routes/posts');
 var loginRoutes = require('./routes/login');
@@ -53,9 +55,11 @@ app.use(express.basicAuth(function(user, pass) {
 // start mongoDB
 models.databaseModel.connect();
 
+// httpServer listens express routing
+var httpServer = http.createServer(app);
 
 //Setup Socket.IO
-var io = io.listen(app);
+var io = io.listen(httpServer);
 io.sockets.on('connection', function(socket){
   console.log('Client Connected');
   socket.on('message', function(data){
@@ -110,5 +114,6 @@ app.get('/*', function(req, res){
 //  });
 //});
 
-app.listen( port);
+httpServer.listen(port);
+//app.listen(port);
 console.log('Listening on http://0.0.0.0:' + port );
