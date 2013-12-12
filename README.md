@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Node Boilerplate Version 2
 ==========================
 *Requires Node v0.6.6 (or newer)*
@@ -48,3 +49,7 @@ node-boilerplate is setup to be easily deployed on a Joyent Node SmartMachine. T
 2. The main script to run is server.js
 3. The web server port is pulled from process.env.PORT 
 
+=======
+uploader
+========
+>>>>>>> 14c8176a488b75e22890f6ba0171c883abd62a04
