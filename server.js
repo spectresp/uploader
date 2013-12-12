@@ -48,15 +48,19 @@ app.configure(function(){
 //});
 
 
-app.use(express.basicAuth(function(user, pass) {
-  return user === 'test' && pass === 'test';
-}));
+// auth TEST
+//app.use(express.basicAuth(function(user, pass) {
+//  return user === 'test' && pass === 'test';
+//}));
+
 
 // start mongoDB
-models.databaseModel.connect();
+var mongooseConnection = models.databaseModel.connect();
+
 
 // httpServer listens express routing
 var httpServer = http.createServer(app);
+
 
 //Setup Socket.IO
 var io = io.listen(httpServer);
@@ -72,13 +76,24 @@ io.sockets.on('connection', function(socket){
 });
 
 
-app.get('/', function(req,res){
-//  res.send('joo');
+/*
+ Authenticates the user, look for the user from db
+ TODO: now this is used always, when requests send (bad or good?)
+ TODO: does not take socket.io into account
+ */
+var authMiddleware = express.basicAuth(function(user, pass, cb) {
+  var res = user === 'test' && pass === 'test';
+  if(res === false) console.log("Auth error!: ERROR: " + res);
+  cb(null, res); // cb same as 'next'
+});
+
+
+app.get('/', authMiddleware, function(req,res){
   res.render('index', {title: 'home', description: 'blog page', author: 'me'});
 });
 
 
-app.get('/andr', andrRoutes.getData);
+app.get('/andr', authMiddleware, andrRoutes.getData);
 
 app.get('/posts', postRoutes.findAll);
 app.get('/posts/:id', postRoutes.findById);
