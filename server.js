@@ -4,6 +4,7 @@ var connect = require('connect'),
     app = express(),
     http = require('http'),
     io = require('socket.io'),
+    MongoStore = require('connect-mongo')(express),
     port = (4444);
 //    port = (process.env.PORT || 4444);
 
@@ -14,16 +15,40 @@ var andrRoutes = require('./routes/andrtest');
 var models = {};
 models.databaseModel = require('./models/database/databaseModel');
 
+var sessionSecret = "uploaderSecret";
+
 
 app.configure(function(){
-    app.set('views', __dirname + '/public/views');
-    app.set('view options', { layout: false });
-    app.set('view engine', 'jade');
-    app.use(connect.bodyParser());
-    app.use(express.cookieParser());
-    app.use(express.session({ secret: "shhhhhhhhh!"}));
-    app.use(connect.static(__dirname + '/public'));
-    app.use(app.router);
+  app.set('views', __dirname + '/public/views');
+  app.set('view options', { layout: false });
+  app.set('view engine', 'jade');
+  app.use(connect.bodyParser());
+  app.use(express.cookieParser());
+  // how to handle sessionStore
+  app.use(express.session({
+    secret: sessionSecret,
+      store: new MongoStore({
+      db: settins.db
+    }),
+    cookie: {
+      maxAge: 60000
+    }
+  }));
+  app.use(connect.static(__dirname + '/public'));
+  app.use(app.router);
+  app.use(function(req, res, next){
+    var sess = req.session;
+    if (sess.views) {
+      res.setHeader('Content-Type', 'text/html');
+      res.write('<p>views: ' + sess.views + '</p>');
+      res.write('<p>expires in: ' + (sess.cookie.maxAge / 1000) + 's</p>');
+      res.end();
+      sess.views++;
+    } else {
+      sess.views = 1;
+      res.end('welcome to the session demo. refresh!');
+    }
+  });
 });
 
 
