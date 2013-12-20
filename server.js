@@ -153,6 +153,7 @@ app.post('/posts', postRoutes.addPost);
 app.put('/posts/:id', postRoutes.updatePost);
 app.delete('/posts/:id', postRoutes.deletePost);
 
+
 // passport routes test
 app.post('/auth/login/success', authController.loginSuccess);
 app.post('/auth/login/failure', authController.loginFailure);
