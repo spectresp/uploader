@@ -41,10 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="0" selection-start="4557" selection-end="4557" vertical-scroll-proportion="0.52169627" vertical-offset="1176" max-vertical-offset="2255">
+            <state line="155" column="0" selection-start="4557" selection-end="4557" vertical-scroll-proportion="0.0" vertical-offset="1176" max-vertical-offset="2255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="5" selection-start="63" selection-end="63" vertical-scroll-proportion="0.054240633" vertical-offset="0" max-vertical-offset="1014">
               <folding />
             </state>
           </provider>
@@ -63,15 +72,6 @@
         <entry file="file://$PROJECT_DIR$/routes/worker.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="363">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swarmworker.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/worker/swarmworker.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="99">
               <folding />
             </state>
           </provider>
@@ -123,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/lib/script.js" />
         <option value="$PROJECT_DIR$/models/database/schema/userschema.js" />
         <option value="$PROJECT_DIR$/routes/authroutes.js" />
         <option value="$PROJECT_DIR$/public/views/auth/authpage.jade" />
@@ -139,6 +138,7 @@
         <option value="$PROJECT_DIR$/routes/login.js" />
         <option value="$PROJECT_DIR$/routes/worker.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -583,11 +583,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="7" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.9001135" vertical-offset="32" max-vertical-offset="913" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="800" column="6" selection-start="18740" selection-end="18740" vertical-scroll-proportion="0.84931505" vertical-offset="8304" max-vertical-offset="8888" />
@@ -680,7 +675,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="0" selection-start="4557" selection-end="4557" vertical-scroll-proportion="0.52169627" vertical-offset="1176" max-vertical-offset="2255">
+        <state line="155" column="0" selection-start="4557" selection-end="4557" vertical-scroll-proportion="0.0" vertical-offset="1176" max-vertical-offset="2255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="63" selection-end="63" vertical-scroll-proportion="0.054240633" vertical-offset="0" max-vertical-offset="1014">
           <folding />
         </state>
       </provider>
