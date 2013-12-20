@@ -3,23 +3,24 @@
   "version": "0.0.1",
   "main": "./server",
   "dependencies": {
-    "connect":       "*",
-    "express":       "*",
-    "jade":          "*",
-    "mongoose":      "*",
-    "mongodb":       "*",
+    "connect": "*",
+    "express": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "mongodb": "*",
     "connect-mongo": "*",
-    "socket.io":     "*",
-    "cheerio":       "*"
+    "socket.io": "*",
+    "cheerio": "*",
+    "moment": "~2.4.0"
   },
   "devDependencies": {
-    "vows":          "*",
-	  "mocha":         "*",
-	  "should":        "*",
-	  "chai":          "*"
+    "vows": "*",
+    "mocha": "*",
+    "should": "*",
+    "chai": "*"
   },
   "repository": {
-    "type":          "git",
-    "url":           ""
+    "type": "git",
+    "url": ""
   }
 }

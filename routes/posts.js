@@ -61,7 +61,10 @@ exports.addPost = function(req, res) {
     collection.insert(post, {safe: true}, function(err, result) {
       if(err) {
         res.send({'error': 'Error when inserting new post'});
-      } else {
+      } else {/**
+ * Created by vjukka on 12/19/13.
+ */
+
         cl("Posts, addPost, success: " + JSOn.stringify(result[0]));
         res.send(result[0]);
       }

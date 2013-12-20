@@ -1,7 +1,11 @@
-/* Author: YOUR NAME HERE
-*/
+requirejs.cofig({
+  jquery: 'js/lib/jquery-1.8.2.min.js',
 
-$(document).ready(function() {   
+
+})
+
+
+require([], function() {
 
   var socket = io.connect();
 
@@ -12,4 +16,5 @@ $(document).ready(function() {
   socket.on('server_message', function(data){
    $('#receiver').append('<li>' + data + '</li>');  
   });
-});
+
+}); // require

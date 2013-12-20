@@ -5,17 +5,26 @@ var connect = require('connect'),
     http = require('http'),
     io = require('socket.io'),
     MongoStore = require('connect-mongo')(express),
+    passport = require('passport'),
     port = (4444);
 //    port = (process.env.PORT || 4444);
+
 
 var postRoutes = require('./routes/posts');
 var loginRoutes = require('./routes/login');
 var andrRoutes = require('./routes/andrtest');
+var authController = require('./controllers/authcontroller');
+var woerkerRoutes = require('./routes/worker');
 
 var models = {};
 models.databaseModel = require('./models/database/databaseModel');
+// User model for user authentication
+models.User = require('./models/database/schema/User');
 
 var sessionSecret = "uploaderSecret";
+passport.use(models.User.localStrategy);
+passport.serializeUser(models.User.serializeUser);
+passport.deserializeUser(models.User.deserializeUser);
 
 
 app.configure(function(){
@@ -27,8 +36,9 @@ app.configure(function(){
   // how to handle sessionStore
   app.use(express.session({
     secret: sessionSecret,
-      store: new MongoStore({
-      db: settins.db
+    store: new MongoStore({
+      url: 'mongodb://localhost:27017/uploadersessionstore',
+      maxage: 300000
     }),
     cookie: {
       maxAge: 60000
@@ -48,8 +58,14 @@ app.configure(function(){
       sess.views = 1;
       res.end('welcome to the session demo. refresh!');
     }
+    next();
   });
 });
+
+
+// Passport user data handling, MUST be after express session is initialized
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 //setup the errors
@@ -81,8 +97,6 @@ app.configure(function(){
 
 // start mongoDB
 var mongooseConnection = models.databaseModel.connect();
-
-
 // httpServer listens express routing
 var httpServer = http.createServer(app);
 
@@ -106,19 +120,32 @@ io.sockets.on('connection', function(socket){
  TODO: now this is used always, when requests send (bad or good?)
  TODO: does not take socket.io into account
  */
-var authMiddleware = express.basicAuth(function(user, pass, cb) {
-  var res = user === 'test' && pass === 'test';
-  if(res === false) console.log("Auth error!: ERROR: " + res);
-  cb(null, res); // cb same as 'next'
-});
+//var authMiddleware = express.basicAuth(function(user, pass, cb) {
+//  var res = user === 'test' && pass === 'test';
+//  if(res === false) console.log("Auth error!: ERROR: " + res);
+//  cb(null, res); // cb same as 'next'
+//});
+//
+//
+//app.get('/', authMiddleware, function(req,res){
+//  res.render('index', {title: 'home', description: 'blog page', author: 'me'});
+//});
 
 
-app.get('/', authMiddleware, function(req,res){
-  res.render('index', {title: 'home', description: 'blog page', author: 'me'});
-});
+//var authMiddleware = express.basicAuth(function(user, pass, cb) {
+//  var res = user === 'test' && pass === 'test';
+//  if(res === false) console.log("Auth error!: ERROR: " + res);
+//  cb(null, res); // cb same as 'next'
+//});
+//
+//
+//app.get('/', authMiddleware, function(req,res){
+//  res.render('index', {title: 'home', description: 'blog page', author: 'me'});
+//});
 
 
-app.get('/andr', authMiddleware, andrRoutes.getData);
+//app.get('/andr', authMiddleware, andrRoutes.getData);
+app.get('/andr', andrRoutes.getData);
 
 app.get('/posts', postRoutes.findAll);
 app.get('/posts/:id', postRoutes.findById);
@@ -126,9 +153,22 @@ app.post('/posts', postRoutes.addPost);
 app.put('/posts/:id', postRoutes.updatePost);
 app.delete('/posts/:id', postRoutes.deletePost);
 
-app.get('/auth/popover', loginRoutes.popover);
-app.get('/auth/signup', loginRoutes.signup);
-app.post('/auth/login', loginRoutes.login);
+// passport routes test
+app.post('/auth/login/success', authController.loginSuccess);
+app.post('/auth/login/failure', authController.loginFailure);
+app.get('/auth/logout', authController.logout);
+app.post('/auth/login', authController.login);
+app.get('/login', function(req, res) {
+  res.render(__dirname + '/public/views/layout');
+//  res.render(__dirname + '/public/views/auth/loginform', {title: 'login page', description: 'login page'});
+});
+
+// Worker test
+app.get('/worker', workerRoutes.getWorker);
+
+//app.get('/auth/popover', loginRoutes.popover);
+//app.get('/auth/signup', loginRoutes.signup);
+//app.post('/auth/login', loginRoutes.login);
 
 
 //A Route for Creating a 500 Error (Useful to keep around)

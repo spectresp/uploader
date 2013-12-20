@@ -6,6 +6,5 @@ var indexFile = fs.readFileSync(path.join(__dirname, '/../public/views/andr/inde
 
 
 exports.getData = function(req, res) {
-
   res.send(indexFile);
 }
