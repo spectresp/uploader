@@ -1,16 +1,13 @@
 extends ../layout
 
 block loginform
-
-form(action="/login", method="post" class="form-inline minilogin" role="form")
-    .form-group
-        label(class="sr-only" for="exampleInputEmail2") Username
-        input(type="text", name="username" class="form-control" id="exampleInputEmail2" placeholder="username")
-    .form-group
-        label(class="sr-only" for="exampleInputEmail2") password
-        input(type="text", name="password" class="form-control" id="exampleInputEmail2" placeholder="password")
-    .checkbox
-        label
-            input(type="checkbox")
-            | Remember me
-        button(type="submit" class="btn btn-default") Sign in
+    p Log In
+    form(method='post', action='/')
+        p
+        label User
+        input(type='text',name='user')
+    p
+        label Password
+        input(type='password', name='pass')
+    p
+        input(type='submit', name='submit')

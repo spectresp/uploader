@@ -11,10 +11,9 @@ var connect = require('connect'),
 
 
 var postRoutes = require('./routes/posts');
-var loginRoutes = require('./routes/login');
 var andrRoutes = require('./routes/andrtest');
 var authController = require('./controllers/authcontroller');
-var woerkerRoutes = require('./routes/worker');
+var workerRoutes = require('./routes/worker');
 
 var models = {};
 models.databaseModel = require('./models/database/databaseModel');
@@ -132,18 +131,6 @@ io.sockets.on('connection', function(socket){
 //});
 
 
-//var authMiddleware = express.basicAuth(function(user, pass, cb) {
-//  var res = user === 'test' && pass === 'test';
-//  if(res === false) console.log("Auth error!: ERROR: " + res);
-//  cb(null, res); // cb same as 'next'
-//});
-//
-//
-//app.get('/', authMiddleware, function(req,res){
-//  res.render('index', {title: 'home', description: 'blog page', author: 'me'});
-//});
-
-
 //app.get('/andr', authMiddleware, andrRoutes.getData);
 app.get('/andr', andrRoutes.getData);
 
@@ -160,7 +147,8 @@ app.post('/auth/login/failure', authController.loginFailure);
 app.get('/auth/logout', authController.logout);
 app.post('/auth/login', authController.login);
 app.get('/login', function(req, res) {
-  res.render(__dirname + '/public/views/layout');
+  res.render('auth/loginform.jade', {title: 'login page', description: 'login page'});
+//  res.render(__dirname + '/public/views/layout');
 //  res.render(__dirname + '/public/views/auth/loginform', {title: 'login page', description: 'login page'});
 });
 

@@ -11,7 +11,8 @@
     "connect-mongo": "*",
     "socket.io": "*",
     "cheerio": "*",
-    "moment": "~2.4.0"
+    "moment": "~2.4.0",
+    "underscore": "~1.5.2"
   },
   "devDependencies": {
     "vows": "*",
