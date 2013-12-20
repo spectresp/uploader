@@ -1,13 +1,13 @@
 extends ../layout
 
 block loginform
-    p Log In
-    form(method='post', action='/')
-        p
-        label User
-        input(type='text',name='user')
+  p Log In
+  form(method='post', action='auth/login')
     p
-        label Password
-        input(type='password', name='pass')
+     label User
+     input(type='text',name='user')
     p
-        input(type='submit', name='submit')
+      label Password
+      input(type='password', name='pass')
+    p
+      input(type='submit', name='submit')

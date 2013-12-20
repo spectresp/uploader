@@ -22,8 +22,11 @@ userSchema.statics.localStrategy = new PassportLocalStrategy({
   passwordField: 'password'
 },
 
+
 // @see https://github.com/jaredhanson/passport-local
 function(username, password, done) {
+  console.log('User, userSchema');
+
   var User = require('./User')
   User.findOne({email: username}, function(err, user) {
     if(err) { return done(err); }
@@ -43,6 +46,15 @@ function(username, password, done) {
     });
   }); // User
 }); // function
+
+
+// add crypt before saving new user
+userSchema.pre('save', function(next) {
+  var user = this;
+  if(!user.isModified('password')) return next();
+
+
+});
 
 
 userSchema.methods.validPassword = function(password) {

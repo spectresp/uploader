@@ -18,6 +18,7 @@ exports.logout = function(req, res) {
 
 
 exports.loginSuccess = function() {
+  console.log('authController, Login success ' + JSON.stringify(req.body));
   res.json({
     success: true,
     user: req.session.passport.user
@@ -26,6 +27,7 @@ exports.loginSuccess = function() {
 
 
 exports.loginFailure = function(req, res) {
+  console.log('authController, Login failure ' + JSON.stringify(req.body));
   res.json({
     success: false,
     message: 'Invalid username or password'

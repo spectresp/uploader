@@ -141,11 +141,16 @@ app.put('/posts/:id', postRoutes.updatePost);
 app.delete('/posts/:id', postRoutes.deletePost);
 
 
+var loginMiddleware = function(req, res, next) {
+  console.log('login attempt, data: ' + JSON.stringify(req.body));
+  next();
+}
+
 // passport routes test
 app.post('/auth/login/success', authController.loginSuccess);
 app.post('/auth/login/failure', authController.loginFailure);
 app.get('/auth/logout', authController.logout);
-app.post('/auth/login', authController.login);
+app.post('/auth/login', loginMiddleware, authController.login);
 app.get('/login', function(req, res) {
   res.render('auth/loginform.jade', {title: 'login page', description: 'login page'});
 //  res.render(__dirname + '/public/views/layout');
@@ -182,6 +187,9 @@ app.get('/*', function(req, res){
 //    }
 //  });
 //});
+
+
+var user = new models.User({name: 'tt', email: 'tt@tt.com', image: '', password: 'tt', });
 
 httpServer.listen(port);
 //app.listen(port);

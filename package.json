@@ -12,7 +12,8 @@
     "socket.io": "*",
     "cheerio": "*",
     "moment": "~2.4.0",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "crypto": "0.0.3"
   },
   "devDependencies": {
     "vows": "*",
