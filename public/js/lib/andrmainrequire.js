@@ -1,26 +1,31 @@
 requirejs.config({
-//  enforceDefine: true,
-  baseUrl: 'js/lib',
+  enforceDefine: true,
+  baseUrl: 'js',
   paths: {
-    jquery: 'jquery-2.0.3.min.js',
-    jqueryMigrate: 'jquery-migrate.js',
-    underscore: 'underscore-min.js',
-    backbone: 'backbone-min.js'
-//    socketio: '/socket.io/socket.io.js/'
+    'lib': 'lib/',
+    jquery:         [
+      'lib/jquery-2.0.3.min',
+      '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'],
+    jqueryMigrate:  'lib/jquery-migrate',
+    underscore:     'lib/underscore-min',
+    backbone:       'lib/backbone-min',
+    andrmain:       'andr/andrmain'
   },
 
   shim: {
-    "jquery": ['jquery'],
     jqueryMigrate: {
-      deps: ['jquery']
+      deps: []
     },
     underscore: {
       deps: [],
       exports: '_'
     },
     backbone: {
-      deps: ['jquery', 'underscore'],
+      deps: ['underscore'],
       exports: 'Backbone'
+    },
+    backbone: {
+      deps: ['underscore', 'backbone'],
     }
   }
 }); // requirejs.config
@@ -30,13 +35,16 @@ requirejs.config({
 grab errors
  */
 requirejs.onError = function (err) {
-  console.log(err.requireType);
+  console.log("Require.js ERROR: " + err.requireType);
   if (err.requireType === 'timeout') {
-    console.log('modules: ' + err.requireModules);
+    console.log('ERROR, modules: ' + err.requireModules);
   }
-
   throw err;
 };
 
 
-requirejs(['../andr/andrmain']);
+requirejs(['andr/andrmain']);
+
+define(["jquery"], function($) {
+  console.log($.fn);
+});
