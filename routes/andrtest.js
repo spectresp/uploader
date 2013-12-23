@@ -6,5 +6,6 @@ var indexFile = fs.readFileSync(path.join(__dirname, '/../public/views/andr/inde
 
 
 exports.getData = function(req, res) {
-  res.send(indexFile);
+//  res.send(indexFile);
+  res.render('andr/andrindex', {title: 'login page', description: 'login page'});
 }

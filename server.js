@@ -146,6 +146,7 @@ var loginMiddleware = function(req, res, next) {
   next();
 }
 
+
 // passport routes test
 app.post('/auth/login/success', authController.loginSuccess);
 app.post('/auth/login/failure', authController.loginFailure);
@@ -156,6 +157,7 @@ app.get('/login', function(req, res) {
 //  res.render(__dirname + '/public/views/layout');
 //  res.render(__dirname + '/public/views/auth/loginform', {title: 'login page', description: 'login page'});
 });
+
 
 // Worker test
 app.get('/worker', workerRoutes.getWorker);
