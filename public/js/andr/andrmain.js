@@ -3,9 +3,9 @@ define(["jquery", "underscore"], function($, _) {
 
   var socket = io.connect();
 
-//  $('#sender').bind('click', function() {
-//    socket.emit('message', 'Message Sent on ' + new Date());
-//  });
+  $('#sender').bind('click', function() {
+    socket.emit('message', 'Message Sent on ' + new Date());
+  });
 
   socket.on('server_message', function(data){
     $('#receiver').append('<li>' + data + '</li>');

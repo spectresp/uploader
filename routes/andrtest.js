@@ -9,3 +9,17 @@ exports.getData = function(req, res) {
 //  res.send(indexFile);
   res.render('andr/andrindex', {title: 'login page', description: 'login page'});
 }
+
+
+exports.addTask = function(req, res) {
+//  res.send(indexFile);
+  res.render('andr/addtask', {title: 'Add New Task', description: 'Task handler'});
+}
+
+
+exports.addNewTask = function(req, res) {
+//  res.send(indexFile);
+  console.log("andr, addNewTask")
+//  res.render('andr/addtask', {title: 'Add New Task', description: 'Task handler'});
+  res.send('<div>new task added</div>');
+}

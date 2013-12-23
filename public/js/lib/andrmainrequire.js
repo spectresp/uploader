@@ -1,8 +1,9 @@
 requirejs.config({
   enforceDefine: true,
-  baseUrl: 'js',
+  baseUrl: '/js',
   paths: {
-    'lib': 'lib/',
+    'lib': 'lib',
+    // jquery doesn't want itself to be defined through the shim! maybe cant overwrite global jquery
     jquery:         [
       'lib/jquery-2.0.3.min',
       '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'],
@@ -23,9 +24,6 @@ requirejs.config({
     backbone: {
       deps: ['underscore'],
       exports: 'Backbone'
-    },
-    backbone: {
-      deps: ['underscore', 'backbone'],
     }
   }
 }); // requirejs.config
@@ -45,6 +43,5 @@ requirejs.onError = function (err) {
 
 requirejs(['andr/andrmain']);
 
-define(["jquery"], function($) {
-  console.log($.fn);
+define(["jquery", "underscore", "backbone"], function($, _, Backbone) {
 });

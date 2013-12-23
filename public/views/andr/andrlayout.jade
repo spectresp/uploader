@@ -13,12 +13,14 @@ html.no-js(lang='en')
         meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
         title=title
         meta(name="description", content=description)
-        meta(name="viewport", content='width=device-width, initial-scale=1')
+        meta(name="viewport", content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0')
         link(rel='stylesheet', href='/css/style.css')
-    body
+    body(onload="window.scrollTo(0,1);")
         block header
 
         block content
+
+        block addtask
 
         block footer
           footer

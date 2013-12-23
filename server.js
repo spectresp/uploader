@@ -133,6 +133,8 @@ io.sockets.on('connection', function(socket){
 
 //app.get('/andr', authMiddleware, andrRoutes.getData);
 app.get('/andr', andrRoutes.getData);
+app.get('/andr/addtask', andrRoutes.addTask);
+app.post('/andr/addnewtask', andrRoutes.addNewTask);
 
 app.get('/posts', postRoutes.findAll);
 app.get('/posts/:id', postRoutes.findById);
