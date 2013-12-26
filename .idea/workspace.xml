@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formvalidation.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="formvalidation.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/andr/formvalidation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.13043478" vertical-offset="0" max-vertical-offset="759">
+            <state line="7" column="44" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
               <folding />
             </state>
           </provider>
@@ -131,10 +131,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="andrmainrequire.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="andrmainrequire.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/lib/andrmainrequire.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="23" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="627">
+            <state line="33" column="38" selection-start="931" selection-end="931" vertical-scroll-proportion="0.37341774" vertical-offset="186" max-vertical-offset="682">
               <folding />
             </state>
           </provider>
@@ -152,8 +152,19 @@
       <file leaf-file-name="addtask.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/andr/addtask.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="46" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="253">
+            <state line="17" column="46" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="253">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-validate.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/lib/jquery-validate.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1190" column="50" selection-start="43144" selection-end="43144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13596">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/lib/jquery-1.10.2.min.js" />
         <option value="$PROJECT_DIR$/public/js/lib/jquery-migrate.js" />
         <option value="$PROJECT_DIR$/public/views/andr/andrindex.jade" />
         <option value="$PROJECT_DIR$/public/js/lib/jquery-2.0.3.min.js" />
@@ -198,10 +208,11 @@
         <option value="$PROJECT_DIR$/public/views/andr/andrlayout.jade" />
         <option value="$PROJECT_DIR$/public/css/andrsmallscreen.css" />
         <option value="$PROJECT_DIR$/public/css/andrlargescreen.css" />
-        <option value="$PROJECT_DIR$/public/js/lib/andrmainrequire.js" />
         <option value="$PROJECT_DIR$/public/js/andr/orientationmonitor.js" />
         <option value="$PROJECT_DIR$/public/css/andrstyle.css" />
         <option value="$PROJECT_DIR$/public/js/andr/formvalidation.js" />
+        <option value="$PROJECT_DIR$/public/js/lib/jquery-validate.min.js" />
+        <option value="$PROJECT_DIR$/public/js/lib/andrmainrequire.js" />
       </list>
     </option>
   </component>
@@ -624,11 +635,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24976349" sideWeight="0.7398297" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24352941" sideWeight="0.6360153" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34235293" sideWeight="0.6360153" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997344" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36398467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36398467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -670,11 +681,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/lib/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="0.014492754" vertical-offset="0" max-vertical-offset="759" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/andrtest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="341">
@@ -685,13 +691,6 @@
     <entry file="file://$PROJECT_DIR$/public/views/andr/andrindex.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="121">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/andr/addtask.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="253">
           <folding />
         </state>
       </provider>
@@ -738,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/lib/andrmainrequire.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="23" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="275">
@@ -775,7 +767,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/andr/formvalidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.13043478" vertical-offset="0" max-vertical-offset="759">
+        <state line="7" column="44" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/andr/addtask.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="46" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="253">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lib/jquery-validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1190" column="50" selection-start="43144" selection-end="43144" vertical-scroll-proportion="0.0" vertical-offset="12793" max-vertical-offset="13596">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lib/andrmainrequire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="38" selection-start="931" selection-end="931" vertical-scroll-proportion="0.37341774" vertical-offset="186" max-vertical-offset="682">
           <folding />
         </state>
       </provider>

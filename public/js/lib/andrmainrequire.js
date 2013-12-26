@@ -1,5 +1,5 @@
 requirejs.config({
-  enforceDefine: true,
+//  enforceDefine: true,
   baseUrl: '/js',
   paths: {
     'lib': 'lib',
@@ -8,6 +8,7 @@ requirejs.config({
       'lib/jquery-2.0.3.min',
       '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'],
     jqueryMigrate:            'lib/jquery-migrate',
+    jqueryValidate:           'lib/jquery-validate.min',
     underscore:               'lib/underscore-min',
     backbone:                 'lib/backbone-min',
     andrmain:                 'andr/andrmain',
@@ -16,6 +17,9 @@ requirejs.config({
 
   shim: {
     jqueryMigrate: {
+      deps: []
+    },
+    jqueryValidate: {
       deps: []
     },
     underscore: {
@@ -47,5 +51,6 @@ requirejs.onError = function (err) {
 
 requirejs(['andr/andrmain']);
 
-define(["jquery", "underscore", "backbone"], function($, _, Backbone) {
+define(["jquery", "underscore", "jqueryMigrate", "jqueryValidate", "backbone"], function($, jqm, jqv, _, Backbone) {
+  console.log("andrmainrequire, require js files loaded");
 });
