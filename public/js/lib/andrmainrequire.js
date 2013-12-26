@@ -7,10 +7,11 @@ requirejs.config({
     jquery:         [
       'lib/jquery-2.0.3.min',
       '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'],
-    jqueryMigrate:  'lib/jquery-migrate',
-    underscore:     'lib/underscore-min',
-    backbone:       'lib/backbone-min',
-    andrmain:       'andr/andrmain'
+    jqueryMigrate:            'lib/jquery-migrate',
+    underscore:               'lib/underscore-min',
+    backbone:                 'lib/backbone-min',
+    andrmain:                 'andr/andrmain',
+    orientationmonitor:       'andr/orientationmonitor'
   },
 
   shim: {
@@ -24,6 +25,9 @@ requirejs.config({
     backbone: {
       deps: ['underscore'],
       exports: 'Backbone'
+    },
+    orientationmonitor: {
+      deps: ['underscore', 'backbone']
     }
   }
 }); // requirejs.config

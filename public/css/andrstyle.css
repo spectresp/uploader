@@ -60,3 +60,34 @@ h1.fancy {
     margin: 0 6px 6px 6px;
     text-align: center;
 }
+
+
+/*
+orientation query
+*/
+@media all and (orientation:portrait) {
+    h1 {
+        color: red;
+    }
+}
+
+@media all and (orientation:landscape) {
+    h1 {
+        color: blue;
+    }
+}
+
+/*
+width query
+*/
+@media only screen and (max-width: 480px) {
+    h1 {
+        color: red;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    h1 {
+        color: blue;
+    }
+}
