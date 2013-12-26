@@ -12,7 +12,8 @@ requirejs.config({
     underscore:               'lib/underscore-min',
     backbone:                 'lib/backbone-min',
     andrmain:                 'andr/andrmain',
-    orientationmonitor:       'andr/orientationmonitor'
+    orientationmonitor:       'andr/orientationmonitor',
+    taskswebstorage:          'andrtaskswebstorage'
   },
 
   shim: {
@@ -32,6 +33,9 @@ requirejs.config({
     },
     orientationmonitor: {
       deps: ['underscore', 'backbone']
+    },
+    taskswebstorage: {
+      deps: ['underscore', 'backbone', 'jqueryMigrate', 'jqueryValidate']
     }
   }
 }); // requirejs.config
@@ -51,6 +55,7 @@ requirejs.onError = function (err) {
 
 requirejs(['andr/andrmain']);
 
-define(["jquery", "underscore", "jqueryMigrate", "jqueryValidate", "backbone"], function($, jqm, jqv, _, Backbone) {
-  console.log("andrmainrequire, require js files loaded");
+define(["jquery", "underscore", "jqueryMigrate", "jqueryValidate", "backbone", "taskswebstorage"],
+  function($, jqm, jqv, _, Backbone, taskswebstorage) {
+    console.log("andrmainrequire, require js files loaded");
 });

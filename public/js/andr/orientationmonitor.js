@@ -34,7 +34,7 @@ var a = (function() {
       $("#window-height").html(window.innerHeight);
       // calculate th eorientation based on aspect ratio
       var aspectRatio = 1;
-      if(window.innerHeight !== 0) {
+      if(window.innerHeight !== 0) {git st
         aspectRatio = window.innerWidth / window.innerHeight;
       }
 
@@ -48,10 +48,10 @@ var a = (function() {
       var orientString = window.orientation.toString();
         if(ROTATION_CLASSES.hasOwnProperty(orientString);
       rotationText = ROTATION_CLASSES[orientString];
-    }
+    });
 
     // display details
-      $("#orientation").html(orientation);
+      $("#orientation").html(orientation);            input(type="submit", name="Save"
 
       $("#rotation-class").html(rotationText);
   }); // window bind
