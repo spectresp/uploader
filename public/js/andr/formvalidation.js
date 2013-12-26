@@ -63,13 +63,26 @@ var triggerFormValidation = function() {
 
   displayErros();
 
-  // bind validation itself into the function
+  // bind validation itself into the function!!
   $("#taskentry").validate(
-    submitHandler: function() {
+    submitHandler: function(form) {
+      console.log('formvalidation, submitHandler');
 
     },
-    submitHandler: function() {
+    showErrors: function(errorMap, errorList) {
+      console.log('formvalidation, showErrors');
+      // when intialized, empty the error map
+      errors = {};
 
+      // iterate through the error map
+      for (var elementName in errorMap) {
+        if (! errors[elementName]) {
+          errors[elementName] = [];
+        } // if
+        errors[elementName].push(errorMap[elementName]);
+      } // for
+      // now display the errors
+      displayErros();
     }
   });
 
