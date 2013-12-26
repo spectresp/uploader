@@ -26,7 +26,16 @@
       <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="71" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="550">
+            <state line="22" column="47" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formvalidation.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/andr/formvalidation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.13043478" vertical-offset="0" max-vertical-offset="759">
               <folding />
             </state>
           </provider>
@@ -89,7 +98,7 @@
       <file leaf-file-name="andrstyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/andrstyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="79" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1089">
+            <state line="74" column="9" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
@@ -131,10 +140,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orientationmonitor.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="orientationmonitor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/andr/orientationmonitor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="4" selection-start="720" selection-end="720" vertical-scroll-proportion="0.42028984" vertical-offset="0" max-vertical-offset="759">
+            <state line="30" column="56" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
               <folding />
             </state>
           </provider>
@@ -177,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/routes/worker.js" />
         <option value="$PROJECT_DIR$/public/js/lib/jquery-1.10.2.min.js" />
         <option value="$PROJECT_DIR$/public/js/lib/jquery-migrate.js" />
         <option value="$PROJECT_DIR$/public/views/andr/andrindex.jade" />
@@ -191,8 +199,9 @@
         <option value="$PROJECT_DIR$/public/css/andrsmallscreen.css" />
         <option value="$PROJECT_DIR$/public/css/andrlargescreen.css" />
         <option value="$PROJECT_DIR$/public/js/lib/andrmainrequire.js" />
-        <option value="$PROJECT_DIR$/public/css/andrstyle.css" />
         <option value="$PROJECT_DIR$/public/js/andr/orientationmonitor.js" />
+        <option value="$PROJECT_DIR$/public/css/andrstyle.css" />
+        <option value="$PROJECT_DIR$/public/js/andr/formvalidation.js" />
       </list>
     </option>
   </component>
@@ -615,7 +624,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24976349" sideWeight="0.7398297" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.243604" sideWeight="0.6360153" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24352941" sideWeight="0.6360153" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997344" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -661,13 +670,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="9" selection-start="4361" selection-end="4361" vertical-scroll-proportion="0.0" vertical-offset="1419" max-vertical-offset="2255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="0.014492754" vertical-offset="0" max-vertical-offset="759" />
@@ -708,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="71" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/andr/andrlayout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="29" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="429">
@@ -750,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/andrstyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="79" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1089">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="275">
@@ -766,7 +754,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/andr/orientationmonitor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="4" selection-start="720" selection-end="720" vertical-scroll-proportion="0.42028984" vertical-offset="0" max-vertical-offset="759">
+        <state line="30" column="56" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/andrstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="9" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="47" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/andr/formvalidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.13043478" vertical-offset="0" max-vertical-offset="759">
           <folding />
         </state>
       </provider>
