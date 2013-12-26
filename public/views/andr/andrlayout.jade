@@ -12,16 +12,18 @@ html.no-js(lang='en')
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
         title=title
+        link(media='only screen and (max-device-width: 480px)', href='/css/andrsmallscreen.css', type='text/css', rel='stylesheet')
+        link(media='only screen and (min-device-width: 481px)', href='/css/andrlargescreen.css', type='text/css', rel='stylesheet')
         meta(name="description", content=description)
         meta(name="viewport", content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0')
-        link(rel='stylesheet', href='/css/style.css')
+        link(rel='stylesheet', href='/css/andrstyle.css')
     body(onload="window.scrollTo(0,1);")
         block header
 
         block content
 
         block addtask
-
+s
         block footer
           footer
             script(defer, src='/socket.io/socket.io.js')

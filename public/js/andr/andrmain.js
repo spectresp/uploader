@@ -10,5 +10,4 @@ define(["jquery", "underscore"], function($, _) {
   socket.on('server_message', function(data){
     $('#receiver').append('<li>' + data + '</li>');
   });
-
 });
