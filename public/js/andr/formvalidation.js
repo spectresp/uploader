@@ -63,6 +63,16 @@ var triggerFormValidation = function() {
 
   displayErros();
 
+  // bind validation itself into the function
+  $("#taskentry").validate(
+    submitHandler: function() {
+
+    },
+    submitHandler: function() {
+
+    }
+  });
+
 } // triggerFormValidation
 
 
