@@ -1,24 +1,21 @@
 extends andrlayout
 
 block addtask
-
-  div(class="errors")
-
-  div
-    h1(class="fancy#) Create Task
-    form(id="taskentry", action="/andr/addnewtask", method="post")
-      div
-        fieldset(data-role="taskdetails")
-          label(for="taskname") Task Name:
-          input(type="text", name="task[name]", id="taskname", class="required", value="")
-      div
-        fieldset(data-role="taskdescrption")
-          label(for="taskdesc") Task Description:
-          textarea(name="task[description]", rows="5", class="required")
-      div
-        fieldset(data-role="taskdue")
-          label(for="taskdue") Task Due:
-          input(type="text", name="task[due]", id="taskdue", class="required date")
-      div
-        fieldset(data-role="submitbutton")
-          input(class="naked" type="submit", name="Save") Save
+    h1(class="fancy") Create Task
+    div
+      form(id="taskentry", action="/andr/addnewtask", method="post")
+        div
+          fieldset(data-role="taskdetails")
+            label(for="taskname") Task Name:
+            input(type="text", name="task[name]", id="taskname", class="required", value="")
+        div
+          fieldset(data-role="taskdescrption")
+            label(for="taskdesc") Task Description:
+            textarea(name="task[description]", rows="5", class="required")
+        div
+          fieldset(data-role="taskdue")
+            label(for="taskdue") Task Due:
+            input(type="text", name="task[due]", id="taskdue", class="required date")
+        div
+          fieldset(data-role="submitbutton")
+            input(type="submit", name="Save", value="save")
