@@ -82,6 +82,12 @@ input.invalid, textarea.invalid {
     display: none;
 }
 
+ul.errors-inline li {
+    border: 0px;
+    color: red;
+    padding: 0px;
+}
+
 
 /*
 orientation query
